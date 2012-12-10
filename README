@@ -5,7 +5,6 @@ IIS Module for CloudFlare users, similar to mod_cloudflare.c for Apache
 
 Tested with IIS 7, 7.5 and 8. Known to compile using .NET 2.0 or later.
 
-Uses the IPNetwork library by Luke Skywaler: ipnetwork.codeplex.com
 
 ==Rough installation instruction==
 
@@ -23,6 +22,9 @@ Uses the IPNetwork library by Luke Skywaler: ipnetwork.codeplex.com
 
 --This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
 --IPv4 only, for now.
+
+
+This module uses the IPNetwork library by Luke Skywaler: ipnetwork.codeplex.com
 
 Copyright (c) 2009, Luke Skywalker
 All rights reserved.
