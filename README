@@ -5,7 +5,7 @@ IIS Module for CloudFlare users, similar to mod_cloudflare.c for Apache
 
 Tested with IIS 7, 7.5 and 8. Known to compile using .NET 2.0 or later.
 
-More background on [seeing the original visitor IP address in logs when using CloudFlare](https://support.cloudflare.com/entries/22055137-why-do-my-server-logs-show-cloudflare-s-ips-using-cloudflare). More about [CloudFlare](https://www.cloudflare.com)
+More background on [seeing the original visitor IP address in logs when using CloudFlare](https://support.cloudflare.com/entries/22055137-why-do-my-server-logs-show-cloudflare-s-ips-using-cloudflare "CloudFlare"). More about [CloudFlare](https://www.cloudflare.com)
 
 ==Rough installation instruction==
 
