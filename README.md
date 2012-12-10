@@ -25,6 +25,11 @@ More background on [seeing the original visitor IP address in logs when using Cl
 --IPv4 only, for now.
 
 
+==Feedback==
+
+Feedback encouraged, preferably via [CloudFlare Support](http://support.cloudflare.com).
+
+
 This module uses the IPNetwork library by Luke Skywaler: ipnetwork.codeplex.com
 
 Copyright (c) 2009, Luke Skywalker
