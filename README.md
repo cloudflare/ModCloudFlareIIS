@@ -1,7 +1,7 @@
 IIS Module for CloudFlare users, similar to mod_cloudflare.c for Apache
 
---Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
---Adds original visitor IP address to logs
+-Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
+-Adds original visitor IP address to logs
 
 Tested with IIS 7, 7.5 and 8. Known to compile using .NET 2.0 or later.
 
@@ -21,8 +21,8 @@ More background on [seeing the original visitor IP address in logs when using Cl
 
 ==Potential issues==
 
---This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
---IPv4 only, for now.
+-This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
+-IPv4 only, for now.
 
 
 ==Feedback==
