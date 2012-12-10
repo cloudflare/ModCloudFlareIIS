@@ -1,7 +1,8 @@
 IIS Module for CloudFlare users, similar to mod_cloudflare.c for Apache
 
--Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
--Adds original visitor IP address to logs
+*Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
+
+*Adds original visitor IP address to logs
 
 Tested with IIS 7, 7.5 and 8. Known to compile using .NET 2.0 or later.
 
@@ -9,15 +10,15 @@ More background on [seeing the original visitor IP address in logs when using Cl
 
 ==Rough installation instruction==
 
-1.) Compile, if needed.
-2.) Copy both .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
-3.) In the IIS Manager, go to the website/application's "Modules" section.
-4.) Right click, or use the interface to "Add Managed Module"
-5.) Use "ModCloudFlare" as the name. (This is actually arbitrary.)
-6.) For "Type" simply type in ModCloudFlareIIS.ModCloudFlare. (This should autocomplete.)
-7.) Leave the checkbox alone.
-8.) Press "OK."
-9.) Restart the Website/Application, if necessary.
+1. Compile, if needed.
+2. Copy both .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
+3.In the IIS Manager, go to the website/application's "Modules" section.
+4.Right click, or use the interface to "Add Managed Module"
+5. Use "ModCloudFlare" as the name. (This is actually arbitrary.)
+6. For "Type" simply type in ModCloudFlareIIS.ModCloudFlare. (This should autocomplete.)
+7. Leave the checkbox alone.
+8. Press "OK."
+9. Restart the Website/Application, if necessary.
 
 ==Potential issues==
 
