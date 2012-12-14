@@ -17,6 +17,7 @@ namespace ModCloudFlareIIS
         public void Init(HttpApplication context)
         {
             context.PreRequestHandlerExecute += new EventHandler(OnPreRequestHandlerExecute);
+            context.PostLogRequest += new EventHandler(PostLogEvent);
         }
 
         #endregion
@@ -60,8 +61,18 @@ namespace ModCloudFlareIIS
                 if (IsCloudFlareIP(request["REMOTE_ADDR"]))
                 {
                     request.ServerVariables.Set("REMOTE_ADDR", request["HTTP_CF_CONNECTING_IP"]);
-                    app.Response.AppendToLog("CF-Connecting-IP:" + request["HTTP_CF_CONNECTING_IP"]);
                 }
+            }
+        }
+
+        public void PostLogEvent(Object source, EventArgs e)
+        {
+            HttpApplication app = (HttpApplication)source;
+            HttpRequest request = app.Context.Request;
+
+            if (!String.IsNullOrEmpty(request["HTTP_CF_CONNECTING_IP"]))
+            {
+                app.Response.AppendToLog("CloudFlare_Visitor_IP:" + request["HTTP_CF_CONNECTING_IP"]);
             }
         }
     }
