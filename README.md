@@ -22,8 +22,8 @@ More background on [seeing the original visitor IP address in logs when using Cl
 
 ==Potential issues==
 
--This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
--IPv4 only, for now.
+*This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
+*IPv4 only, for now.
 
 
 ==Feedback==
