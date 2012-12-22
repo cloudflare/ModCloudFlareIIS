@@ -1,4 +1,5 @@
-IIS Module for CloudFlare users, similar to mod_cloudflare.c for Apache
+IIS Module for CloudFlare users 
+================================
 
 *Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
 
@@ -8,7 +9,8 @@ Tested with IIS 7, 7.5 and 8. Known to compile using .NET 2.0 or later.
 
 More background on [seeing the original visitor IP address in logs when using CloudFlare](https://support.cloudflare.com/entries/22055137-why-do-my-server-logs-show-cloudflare-s-ips-using-cloudflare "CloudFlare"). More about [CloudFlare](https://www.cloudflare.com)
 
-==Rough installation instruction==
+Rough installation instructions
+------------------------------
 
 1. Compile, if needed.
 2. Copy both .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
@@ -20,18 +22,20 @@ More background on [seeing the original visitor IP address in logs when using Cl
 8. Press "OK."
 9. Restart the Website/Application, if necessary.
 
-==Potential issues==
+Potential issues
+------------------------------
 
 *This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
 
 *IPv4 only, for now.
 
-==Feedback==
+Feedback
+------------------------------
 
 Feedback encouraged, preferably via [CloudFlare Support](http://support.cloudflare.com).
 
 
-This module uses the IPNetwork library by Luke Skywaler: ipnetwork.codeplex.com
+__This module uses the IPNetwork library by Luke Skywaler: http://ipnetwork.codeplex.com__
 
 Copyright (c) 2009, Luke Skywalker
 All rights reserved.
