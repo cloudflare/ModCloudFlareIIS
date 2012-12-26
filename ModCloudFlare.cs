@@ -18,6 +18,7 @@ namespace ModCloudFlareIIS
         {
             context.PreRequestHandlerExecute += new EventHandler(OnPreRequestHandlerExecute);
             context.PostLogRequest += new EventHandler(PostLogEvent);
+            context.EndRequest += new EventHandler(CFResponse);
         }
 
         #endregion
@@ -54,7 +55,7 @@ namespace ModCloudFlareIIS
         public void OnPreRequestHandlerExecute(Object source, EventArgs e)
         {
             HttpApplication app = (HttpApplication)source;
-            HttpRequest request = app.Context.Request;
+            HttpRequest request = app.Context.Request; 
                         
             if (!String.IsNullOrEmpty(request["HTTP_CF_CONNECTING_IP"]))
             {
@@ -71,9 +72,18 @@ namespace ModCloudFlareIIS
             HttpRequest request = app.Context.Request;
 
             if (!String.IsNullOrEmpty(request["HTTP_CF_CONNECTING_IP"]))
-            {
-                app.Response.AppendToLog("CloudFlare_Visitor_IP:" + request["HTTP_CF_CONNECTING_IP"]);
-            }
+               app.Response.AppendToLog("[CloudFlare_Visitor_IP:" + request["HTTP_CF_CONNECTING_IP"] + "]");
+
+            if (!String.IsNullOrEmpty(request["HTTP_CF_RAY"]))
+                app.Response.AppendToLog("[CF_RAY:" + request["HTTP_CF_CONNECTING_IP"] + "]");
+        
+        }
+
+        public void CFResponse(Object source, EventArgs e)
+        {
+            HttpContext context = ((HttpApplication)source).Context;
+
+            context.Response.Headers.Add("ModCloudFlareIIS", "Enabled");
         }
     }
 }
