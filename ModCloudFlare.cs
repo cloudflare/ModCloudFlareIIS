@@ -18,23 +18,25 @@ namespace ModCloudFlareIIS
         {
             context.PreRequestHandlerExecute += new EventHandler(OnPreRequestHandlerExecute);
             context.PostLogRequest += new EventHandler(PostLogEvent);
-            context.EndRequest += new EventHandler(CFResponse);
         }
 
         #endregion
 
         private static List<string> CloudFlareIPRanges = new List<string>()
         {
-            "204.93.240.0/24",
-            "204.93.177.0/24",
-            "199.27.128.0/21",
-            "173.245.48.0/20",
-            "103.22.200.0/22",
-            "141.101.64.0/18",
-            "108.162.192.0/18",
-            "190.93.240.0/20",
-            "188.114.96.0/20",
-            "198.41.128.0/17"
+                "204.93.240.0/24",
+                "204.93.177.0/24",
+                "199.27.128.0/21",
+                "173.245.48.0/20",
+                "103.21.244.0/22",
+                "103.22.200.0/22",
+                "103.31.4.0/22",
+                "141.101.64.0/18",
+                "108.162.192.0/18",
+                "190.93.240.0/20",
+                "188.114.96.0/20",
+                "197.234.240.0/22",
+                "198.41.128.0/17"
         };
 
         public static bool IsCloudFlareIP(string ip)
@@ -77,13 +79,6 @@ namespace ModCloudFlareIIS
             if (!String.IsNullOrEmpty(request["HTTP_CF_RAY"]))
                 app.Response.AppendToLog("[CF_RAY:" + request["HTTP_CF_CONNECTING_IP"] + "]");
         
-        }
-
-        public void CFResponse(Object source, EventArgs e)
-        {
-            HttpContext context = ((HttpApplication)source).Context;
-
-            context.Response.Headers.Add("ModCloudFlareIIS", "Enabled");
         }
     }
 }
