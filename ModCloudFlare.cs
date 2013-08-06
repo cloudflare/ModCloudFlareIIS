@@ -36,7 +36,8 @@ namespace ModCloudFlareIIS
                 "190.93.240.0/20",
                 "188.114.96.0/20",
                 "197.234.240.0/22",
-                "198.41.128.0/17"
+                "198.41.128.0/17",
+                "162.158.0.0/15"
         };
 
         public static bool IsCloudFlareIP(string ip)
