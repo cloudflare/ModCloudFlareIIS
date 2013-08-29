@@ -78,7 +78,7 @@ namespace ModCloudFlareIIS
                app.Response.AppendToLog("[CloudFlare_Visitor_IP:" + request["HTTP_CF_CONNECTING_IP"] + "]");
 
             if (!String.IsNullOrEmpty(request["HTTP_CF_RAY"]))
-                app.Response.AppendToLog("[CF_RAY:" + request["HTTP_CF_CONNECTING_IP"] + "]");
+                app.Response.AppendToLog("[CF_RAY:" + request["HTTP_CF_RAY"] + "]");
         
         }
     }
