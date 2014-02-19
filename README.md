@@ -17,7 +17,7 @@ Rough installation instructions
 3. In the IIS Manager, go to the website/application's "Modules" section.
 4. Right click, or use the interface to "Add Managed Module"
 5. Use "ModCloudFlare" as the name. (This is actually arbitrary.)
-6. For "Type" simply type in ModCloudFlareIIS.ModCloudFlare. (This should autocomplete.)
+6. For "Type" simply type in ModCloudFlareIIS.ModCloudFlare. (This should autocomplete. If it doesn't, the DLL files are likely in the wrong place, or you're in the wrong "Modules" section.)
 7. Leave the checkbox alone.
 8. Press "OK."
 9. Restart the Website/Application, if necessary.
