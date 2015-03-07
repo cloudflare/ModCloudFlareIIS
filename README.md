@@ -1,7 +1,7 @@
 IIS Module for CloudFlare users 
 ================================
 
-*Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
+*Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service, even on IPv6!
 
 *Adds original visitor IP address to logs
 
@@ -26,8 +26,6 @@ Potential issues
 ------------------------------
 
 *This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
-
-*IPv4 only, for now.
 
 Feedback
 ------------------------------
