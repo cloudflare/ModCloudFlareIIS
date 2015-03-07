@@ -10,9 +10,9 @@ using System.Net.Sockets;
 using System.Collections;
 using eExNetworkLibrary.IP;
 
-namespace ModCloudFlareIIS2
+namespace ModCloudFlareIIS
 {
-    public class ModCloudFlareIIS2 : IHttpModule
+    public class ModCloudFlareIIS : IHttpModule
     {
         #region IHttpModule Members
 
