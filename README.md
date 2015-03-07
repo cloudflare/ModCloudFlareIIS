@@ -13,7 +13,7 @@ Rough installation instructions
 ------------------------------
 
 1. Compile, if needed.
-2. Copy both .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
+2. Copy all .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
 3. In the IIS Manager, go to the website/application's "Modules" section.
 4. Right click, or use the interface to "Add Managed Module"
 5. Use "ModCloudFlare" as the name. (This is actually arbitrary.)
