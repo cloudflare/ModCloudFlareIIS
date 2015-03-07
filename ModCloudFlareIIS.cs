@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Web;
 using LukeSkywalker.IPNetwork;
 using System.Net;
@@ -131,11 +131,12 @@ namespace ModCloudFlareIIS
             HttpApplication app = (HttpApplication)source;
             HttpRequest request = app.Context.Request; 
                         
-            if (!String.IsNullOrEmpty(request["HTTP_CF_CONNECTING_IP"]))
+            if (request.HttpMethod != "POST" && !String.IsNullOrEmpty(request["HTTP_CF_CONNECTING_IP"]))
             {
                 if (IsCloudFlareIP(request["REMOTE_ADDR"]))
                 {
                     request.ServerVariables.Set("REMOTE_ADDR", request["HTTP_CF_CONNECTING_IP"]);
+                    request.ServerVariables.Set("REMOTE_HOST", request["HTTP_CF_CONNECTING_IP"]);
                 }
             }
         }
