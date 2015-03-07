@@ -1,7 +1,7 @@
 IIS Module for CloudFlare users 
 ================================
 
-*Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service.
+*Restores original visitor IP address to web applications running on IIS and using CloudFlare's performance and security service, even on IPv6!
 
 *Adds original visitor IP address to logs
 
@@ -13,7 +13,7 @@ Rough installation instructions
 ------------------------------
 
 1. Compile, if needed.
-2. Copy both .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
+2. Copy all .dll files to the BIN folder in the root of your desired application/website folder. If this folder doesn't exist, then create it.
 3. In the IIS Manager, go to the website/application's "Modules" section.
 4. Right click, or use the interface to "Add Managed Module"
 5. Use "ModCloudFlare" as the name. (This is actually arbitrary.)
@@ -26,8 +26,6 @@ Potential issues
 ------------------------------
 
 *This module is likely far from complete and may not cover all methods of retrieving a visitor's IP using ServerVariables
-
-*IPv4 only, for now.
 
 Feedback
 ------------------------------
