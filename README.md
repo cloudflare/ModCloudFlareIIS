@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This module is deprecated. As an alternative use https://www.cloudflare.com/technical-resources/#iis
+
 IIS Module for CloudFlare users 
 ================================
 
