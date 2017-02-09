@@ -24,8 +24,6 @@ namespace ModCloudFlareIIS
 
         private static List<string> CloudFlareIPRanges = new List<string>()
         {
-                "204.93.240.0/24",
-                "204.93.177.0/24",
                 "199.27.128.0/21",
                 "173.245.48.0/20",
                 "103.21.244.0/22",
@@ -38,7 +36,8 @@ namespace ModCloudFlareIIS
                 "197.234.240.0/22",
                 "198.41.128.0/17",
                 "162.158.0.0/15",
-                "104.16.0.0/12"
+                "104.16.0.0/12",
+                "172.64.0.0/13"
         };
 
         public static bool IsCloudFlareIP(string ip)
