@@ -39,7 +39,7 @@ Feedback
 Feedback encouraged, preferably via [CloudFlare Support](http://support.cloudflare.com).
 
 
-__This module uses the IPNetwork library by Luke Skywaler: http://ipnetwork.codeplex.com__
+__This module uses the IPNetwork library by Luke Skywalker: http://ipnetwork.codeplex.com__
 
 Copyright (c) 2009, Luke Skywalker
 All rights reserved.
